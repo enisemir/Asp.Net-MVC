@@ -23,17 +23,12 @@ namespace mvc_inermadiate.Controllers
                 new Urun() {UrunID=7, UrunAdi="iphone 7s", Aciklama="idareeder", Fiyat=3000, Satistami=true },
                 new Urun() {UrunID=8, UrunAdi="iphone 7s", Aciklama="idareeder", Fiyat=3000, Satistami=false }
             };
-            List<Kategori> kategoriler = new List<Kategori>()
-            {
-                new Kategori() {id=1,KategoriAdi="Telefon" },
-                new Kategori() {id=1,KategoriAdi="Tablet" },
-                new Kategori() {id=1,KategoriAdi="Laptop" }
-            };
+            
 
             UrunKategori model = new UrunKategori();
             model.UrunSayisi = urunler.Count();
             model.Urunler = urunler;
-            model.Kategoriler = kategoriler;
+            
 
             //ViewBag.UrunSayisi = urunler.Count();
             //ViewBag.Kategoriler = kategoriler;

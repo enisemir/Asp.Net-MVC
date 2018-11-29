@@ -9,6 +9,5 @@ namespace mvc_inermadiate.Models
     {
         public int UrunSayisi { get; set; }
         public List<Urun> Urunler { get; set; }
-        public List<Kategori> Kategoriler { get; set; }
     }
 }
