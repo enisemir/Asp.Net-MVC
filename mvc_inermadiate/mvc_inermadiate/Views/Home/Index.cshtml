@@ -1,0 +1,48 @@
+﻿@using mvc_inermadiate.Models;
+@model UrunKategori
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Kurslar</h2>
+<hr/>
+<div class="alert alert-success" role="alert">
+    <strong>
+        @Model.UrunSayisi
+    </strong>adet ürün listelendi.
+     
+</div>
+
+
+@foreach (var urun in Model.Urunler)
+{
+
+    if (urun.Satistami==true)
+    {
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                        @foreach (var katregori in Model.Kategoriler)
+                        {
+                            <a href="#" class="list-group-item">@katregori.KategoriAdi</a>
+                        }                        
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="thumbnail">
+                        <img src="..." alt="...">
+                        <div class="caption">
+                            <h3>@urun.UrunAdi</h3>
+                            <p>@urun.Aciklama</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    }
+}   
+
+
+
