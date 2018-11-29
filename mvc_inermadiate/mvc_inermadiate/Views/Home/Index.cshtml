@@ -13,36 +13,38 @@
      
 </div>
 
+<div class="row">
+    <div class="col-md-3">
+      @Html.Partial("KategoriMenu", Model.Kategoriler)
+    </div>
 
-@foreach (var urun in Model.Urunler)
-{
 
-    if (urun.Satistami==true)
+    @foreach (var urun in Model.Urunler)
     {
 
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="list-group">
-                        @foreach (var katregori in Model.Kategoriler)
-                        {
-                            <a href="#" class="list-group-item">@katregori.KategoriAdi</a>
-                        }                        
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="thumbnail">
-                        <img src="..." alt="...">
-                        <div class="caption">
-                            <h3>@urun.UrunAdi</h3>
-                            <p>@urun.Aciklama</p>
-                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                        </div>
+        if (urun.Satistami == true)
+        {
+
+
+            <div class="col-md-9">
+                <div class="thumbnail">
+                    <img src="..." alt="...">
+                    <div class="caption">
+                        <h3>@urun.UrunAdi</h3>
+                        <p>@urun.Aciklama</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                     </div>
                 </div>
             </div>
 
+
+        }
+
     }
-}   
+
+</div>
+
+
 
 
 

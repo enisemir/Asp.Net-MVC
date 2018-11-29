@@ -1,0 +1,10 @@
+﻿@using mvc_inermadiate.Models;
+@model List<Kategori>
+
+
+<div class="list-group">
+    @foreach (var katregori in Model)
+            {
+        <a href="#" class="list-group-item">@katregori.KategoriAdi</a>
+    }
+</div>
