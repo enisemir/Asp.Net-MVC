@@ -12,6 +12,7 @@ namespace mvc_inermadiate.Models
         public string Aciklama { get; set; }
         public double Fiyat { get; set; }
         public bool Satistami { get; set; }
+        public string Resim { get; set; }
 
     }
 }

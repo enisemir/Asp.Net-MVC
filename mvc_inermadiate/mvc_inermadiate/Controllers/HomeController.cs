@@ -11,22 +11,11 @@ namespace mvc_inermadiate.Controllers
     {
         // GET: Home
         public ActionResult Index()
-        {
-            List<Urun> urunler = new List<Urun>()
-            {
-                new Urun() {UrunID=1, UrunAdi="samsungs6", Aciklama="idareeder", Fiyat=1000, Satistami=true },
-                new Urun() {UrunID=2, UrunAdi="samsungs7", Aciklama="idareeder", Fiyat=1000, Satistami=false },
-                new Urun() {UrunID=3, UrunAdi="samsungs8", Aciklama="idareeder", Fiyat=2000, Satistami=true },
-                new Urun() {UrunID=4, UrunAdi="iphone 6", Aciklama="idareeder", Fiyat=3000, Satistami=false },
-                new Urun() {UrunID=5, UrunAdi="iphone 7s", Aciklama="idareeder", Fiyat=3000, Satistami=true },
-                new Urun() {UrunID=6, UrunAdi="iphone 7s", Aciklama="idareeder", Fiyat=3000, Satistami=false },
-                new Urun() {UrunID=7, UrunAdi="iphone 7s", Aciklama="idareeder", Fiyat=3000, Satistami=true },
-                new Urun() {UrunID=8, UrunAdi="iphone 7s", Aciklama="idareeder", Fiyat=3000, Satistami=false }
-            };        
+        {      
 
             UrunKategori model = new UrunKategori();
-            model.UrunSayisi = urunler.Count();
-            model.Urunler = urunler;
+            model.UrunSayisi = Veritabani.Liste.Count();
+            model.Urunler = Veritabani.Liste;
 
             //ViewBag.UrunSayisi = urunler.Count();
             //ViewBag.Kategoriler = kategoriler;
