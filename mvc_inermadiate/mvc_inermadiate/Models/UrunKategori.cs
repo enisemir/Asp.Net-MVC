@@ -8,6 +8,6 @@ namespace mvc_inermadiate.Models
     public class UrunKategori
     {
         public int UrunSayisi { get; set; }
-        public List<Urun> Urunler { get; set; }
+        public List<Urun> Urunler { get; set; }    
     }
 }

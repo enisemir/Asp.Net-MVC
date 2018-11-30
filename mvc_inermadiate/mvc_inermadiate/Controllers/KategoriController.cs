@@ -14,7 +14,8 @@ namespace mvc_inermadiate.Controllers
         {
             return View();
         }
-       public PartialViewResult KategoriMenu()
+        [ChildActionOnly]
+        public PartialViewResult KategoriMenu()
         {
             List<Kategori> kategoriler = new List<Kategori>()
             {

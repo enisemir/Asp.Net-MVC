@@ -22,17 +22,24 @@ namespace mvc_inermadiate.Controllers
                 new Urun() {UrunID=6, UrunAdi="iphone 7s", Aciklama="idareeder", Fiyat=3000, Satistami=false },
                 new Urun() {UrunID=7, UrunAdi="iphone 7s", Aciklama="idareeder", Fiyat=3000, Satistami=true },
                 new Urun() {UrunID=8, UrunAdi="iphone 7s", Aciklama="idareeder", Fiyat=3000, Satistami=false }
-            };
-            
+            };        
 
             UrunKategori model = new UrunKategori();
             model.UrunSayisi = urunler.Count();
             model.Urunler = urunler;
-            
 
             //ViewBag.UrunSayisi = urunler.Count();
             //ViewBag.Kategoriler = kategoriler;
             return View(model);
+        }
+
+        public ActionResult Contact()
+        {
+            return View();  
+        }
+        public ActionResult About()
+        {
+            return View();
         }
     }
 }
