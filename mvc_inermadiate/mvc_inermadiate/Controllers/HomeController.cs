@@ -14,12 +14,18 @@ namespace mvc_inermadiate.Controllers
         {      
 
             UrunKategori model = new UrunKategori();
-            model.UrunSayisi = Veritabani.Liste.Count();
-            model.Urunler = Veritabani.Liste;
+            model.UrunSayisi = Veritabani.Liste.Where(i=> i.Satistami == true).Count();
+            model.Urunler = Veritabani.Liste.Where(i=> i.Satistami == true).ToList();
 
             //ViewBag.UrunSayisi = urunler.Count();
             //ViewBag.Kategoriler = kategoriler;
             return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var urun = Veritabani.Liste.Where(i => i.UrunID == id).FirstOrDefault();
+            return View(urun);
         }
 
         public ActionResult Contact()

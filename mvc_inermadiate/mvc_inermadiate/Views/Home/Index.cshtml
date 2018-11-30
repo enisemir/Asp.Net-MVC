@@ -14,18 +14,16 @@
 </div>
     @foreach (var urun in Model.Urunler)
     {
-
-        if (urun.Satistami == true)
-        {
-
+        <div class="col-md-12">
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img src="Http://via.placeholder.com/350x150" alt="...">
                     <div class="caption">
                         <h3>@urun.UrunAdi</h3>
                         <p>
-                            @if (urun.Aciklama.Length > 50) {
-                                @(urun.Aciklama.Substring(0,47) + "...")
+                            @if (urun.Aciklama.Length > 50)
+                            {
+                                @(urun.Aciklama.Substring(0, 47) + "...")
                             }
                             else
                             {
@@ -34,14 +32,12 @@
 
 
                         </p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                         @*<p><a href="/Home/Details/?urunid=@urun.UrunID" class="btn btn-primary" role="button">Button</a>*@
+                        @Html.ActionLink("Ürünü İncele", "Details",new { id = @urun.UrunID }, new { @class="btn btn-primary" } )
                     </div>
                 </div>
             </div>
-
-
-        }
-
+        </div>
     }
 
 
