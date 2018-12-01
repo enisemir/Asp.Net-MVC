@@ -27,10 +27,17 @@ namespace mvc_inermadiate.Controllers
             var urun = Veritabani.Liste.Where(i => i.UrunID == id).FirstOrDefault();
             return View(urun);
         }
-
+        [HttpGet]
         public ActionResult UrunEkle()
         {
             return View();
+        }
+        [HttpPost]
+        public ActionResult UrunEkle(Urun entity)
+        {
+            Veritabani.ElemanEkle(entity);
+
+            return View("UrunListe",Veritabani.Liste);
         }
 
         public ActionResult Contact()

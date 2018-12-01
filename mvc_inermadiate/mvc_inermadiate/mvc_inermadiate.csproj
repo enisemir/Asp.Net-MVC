@@ -135,6 +135,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Home\UrunEkle.cshtml" />
+    <Content Include="Views\Home\UrunListe.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
