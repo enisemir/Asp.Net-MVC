@@ -28,6 +28,11 @@ namespace mvc_inermadiate.Controllers
             return View(urun);
         }
 
+        public ActionResult UrunEkle()
+        {
+            return View();
+        }
+
         public ActionResult Contact()
         {
             return View();  
