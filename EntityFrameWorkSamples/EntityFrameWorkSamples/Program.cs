@@ -12,21 +12,25 @@ namespace EntityFrameWorkSamples
         {
             //LİNQ (Language integrated query)
             Context uruncontext = new Context();
-            List<Urun> urunler = new List<Urun>()
-            {
-                new Urun() { UrunAdi = "samsung s4", Fiyat = 2000, StokAdeti = 100, Satistami = true },
-                new Urun() { UrunAdi = "samsung s5", Fiyat = 3000, StokAdeti = 100, Satistami = true },
-                new Urun() { UrunAdi = "samsung s6", Fiyat = 4000, StokAdeti = 100, Satistami = true },
-                new Urun() { UrunAdi = "samsung s7", Fiyat = 5000, StokAdeti = 100, Satistami = true },
-                new Urun() { UrunAdi = "samsung s8", Fiyat = 6000, StokAdeti = 100, Satistami = true },               
-            };
+            //List<Kategori> Kategoriler = uruncontext.Kategoriler.ToList();
+            //var Kategoriler = uruncontext.Kategoriler.ToList();
 
-            foreach (var urun in urunler)
-            {
-                uruncontext.Urunler.Add(urun);
-            }
-            uruncontext.SaveChanges();
-            Console.WriteLine("veritabanı oluştu");
+            //foreach (var kategori in Kategoriler)
+            //{
+            //    Console.WriteLine("kategori id : {0} kategori adı : {1}", kategori.Id, kategori.KategoriAdi);
+            //}
+
+            //var urunler = uruncontext.Urunler.ToList();
+
+            //foreach (var urun in urunler)
+            //{
+            //    Console.WriteLine("urun id : {0} urun adı : {1}", urun.Id,urun.UrunAdi);
+            //}
+
+
+            var urun = uruncontext.Urunler.Find(5);
+
+            Console.WriteLine("urun id : {0} urun adı : {1}", urun.Id, urun.UrunAdi);
             Console.ReadLine();
         }
     }
