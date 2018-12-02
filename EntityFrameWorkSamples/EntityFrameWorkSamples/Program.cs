@@ -10,27 +10,24 @@ namespace EntityFrameWorkSamples
     {
         static void Main(string[] args)
         {
-            Kategori k = new Kategori();
-            k.Id = 4;
-            k.KategoriAdi = "bigisayar";
+            //LİNQ (Language integrated query)
+            Context uruncontext = new Context();
+            List<Urun> urunler = new List<Urun>()
+            {
+                new Urun() { UrunAdi = "samsung s4", Fiyat = 2000, StokAdeti = 100, Satistami = true },
+                new Urun() { UrunAdi = "samsung s5", Fiyat = 3000, StokAdeti = 100, Satistami = true },
+                new Urun() { UrunAdi = "samsung s6", Fiyat = 4000, StokAdeti = 100, Satistami = true },
+                new Urun() { UrunAdi = "samsung s7", Fiyat = 5000, StokAdeti = 100, Satistami = true },
+                new Urun() { UrunAdi = "samsung s8", Fiyat = 6000, StokAdeti = 100, Satistami = true },               
+            };
 
-            Context db = new Context();
-            db.Kategoriler.Add(k);
-            db.SaveChanges();
-
-            Console.WriteLine("veri kayıt edildi");
+            foreach (var urun in urunler)
+            {
+                uruncontext.Urunler.Add(urun);
+            }
+            uruncontext.SaveChanges();
+            Console.WriteLine("veritabanı oluştu");
             Console.ReadLine();
-
-
-
-            //List<Kategori> Kategoriler = new List<Kategori>
-            //{
-            //    new Kategori(){Id=1, KategoriAdi= "telefon"},
-            //    new Kategori(){Id=1, KategoriAdi= "bilgisyar"},
-            //    new Kategori(){Id=1, KategoriAdi= "tablet"}
-            //};
-
-            //Kategoriler.Add(k);
         }
     }
 }
