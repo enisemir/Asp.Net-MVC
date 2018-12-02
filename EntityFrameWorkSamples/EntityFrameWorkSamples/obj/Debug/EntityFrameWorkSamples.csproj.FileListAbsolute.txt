@@ -9,3 +9,14 @@ C:\Users\Enis\source\repos\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Deb
 C:\Users\Enis\source\repos\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.csproj.CoreCompileInputs.cache
 C:\Users\Enis\source\repos\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.exe
 C:\Users\Enis\source\repos\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.pdb
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFrameWorkSamples.exe.config
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFrameWorkSamples.exe
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFrameWorkSamples.pdb
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFramework.dll
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFramework.xml
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.csprojResolveAssemblyReference.cache
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.csproj.CoreCompileInputs.cache
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.exe
+C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.pdb

@@ -9,6 +9,10 @@ namespace EntityFrameWorkSamples
 {
     public class Context : DbContext
     {
+        public Context():base("urunConnection")
+        {
+
+        }
         public DbSet<Kategori> Kategoriler { get; set; }
         public DbSet<Urun> Urunler { get; set; }
 
