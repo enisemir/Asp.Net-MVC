@@ -28,9 +28,27 @@ namespace EntityFrameWorkSamples
             //}
 
 
-            var urun = uruncontext.Urunler.Find(5);
+            //var urun = uruncontext.Urunler.Find(5);
 
-            Console.WriteLine("urun id : {0} urun adı : {1}", urun.Id, urun.UrunAdi);
+            //Console.WriteLine("urun id : {0} urun adı : {1}", urun.Id, urun.UrunAdi);
+
+
+            var urunler = uruncontext.Urunler.ToList();
+            foreach (var item in urunler)
+            {
+                Console.WriteLine("urun fiyat : {0}", item.Fiyat);
+            }
+            Console.WriteLine("-------------------");
+            foreach (var urun in urunler)
+            {
+                urun.Fiyat *= 0.25;
+            }
+            uruncontext.SaveChanges();
+            urunler = uruncontext.Urunler.ToList();
+            foreach (var item in urunler)
+            {
+                Console.WriteLine("urun fiyat : {0}", item.Fiyat);
+            }
             Console.ReadLine();
         }
     }
