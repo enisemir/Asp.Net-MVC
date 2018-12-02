@@ -33,21 +33,33 @@ namespace EntityFrameWorkSamples
             //Console.WriteLine("urun id : {0} urun adı : {1}", urun.Id, urun.UrunAdi);
 
 
-            var urunler = uruncontext.Urunler.ToList();
-            foreach (var item in urunler)
+            //var urunler = uruncontext.Urunler.ToList();
+            //foreach (var item in urunler)
+            //{
+            //    Console.WriteLine("urun fiyat : {0}", item.Fiyat);
+            //}
+            //Console.WriteLine("-------------------");
+            //foreach (var urun in urunler)
+            //{
+            //    urun.Fiyat *= 0.25;
+            //}
+            //uruncontext.SaveChanges();
+            //urunler = uruncontext.Urunler.ToList();
+            //foreach (var item in urunler)
+            //{
+            //    Console.WriteLine("urun fiyat : {0}", item.Fiyat);
+            //}
+
+           
+            var urun = uruncontext.Urunler.Find(1);
+            if (urun != null)
             {
-                Console.WriteLine("urun fiyat : {0}", item.Fiyat);
-            }
-            Console.WriteLine("-------------------");
-            foreach (var urun in urunler)
-            {
-                urun.Fiyat *= 0.25;
+                uruncontext.Urunler.Remove(urun);
             }
             uruncontext.SaveChanges();
-            urunler = uruncontext.Urunler.ToList();
-            foreach (var item in urunler)
+            foreach (var item in uruncontext.Urunler)
             {
-                Console.WriteLine("urun fiyat : {0}", item.Fiyat);
+                Console.WriteLine("urun id : {0} urun adı : {1}", urun.Id,urun.UrunAdi);
             }
             Console.ReadLine();
         }
