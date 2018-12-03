@@ -49,18 +49,20 @@ namespace EntityFrameWorkSamples
             //{
             //    Console.WriteLine("urun fiyat : {0}", item.Fiyat);
             //}
+            //var urun = uruncontext.Urunler.Find(1);
+            //if (urun != null)
+            //{
+            //    uruncontext.Urunler.Remove(urun);
+            //}
+            //uruncontext.SaveChanges();
+            //foreach (var item in uruncontext.Urunler)
+            //{
+            //    Console.WriteLine("urun id : {0} urun adı : {1}", urun.Id,urun.UrunAdi);
+            //}
 
-           
-            var urun = uruncontext.Urunler.Find(1);
-            if (urun != null)
-            {
-                uruncontext.Urunler.Remove(urun);
-            }
-            uruncontext.SaveChanges();
-            foreach (var item in uruncontext.Urunler)
-            {
-                Console.WriteLine("urun id : {0} urun adı : {1}", urun.Id,urun.UrunAdi);
-            }
+            var urunler = uruncontext.Urunler.ToList();
+
+            Console.WriteLine("veritabanı oluştu");
             Console.ReadLine();
         }
     }

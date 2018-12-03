@@ -11,7 +11,7 @@ namespace EntityFrameWorkSamples
     {
         public Context():base("urunConnection")
         {
-
+            Database.SetInitializer(new DataInitializer());
         }
         public DbSet<Kategori> Kategoriler { get; set; }
         public DbSet<Urun> Urunler { get; set; }

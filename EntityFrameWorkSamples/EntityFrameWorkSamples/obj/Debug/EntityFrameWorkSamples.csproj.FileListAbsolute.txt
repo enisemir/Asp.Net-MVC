@@ -20,3 +20,13 @@ C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWo
 C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.csproj.CoreCompileInputs.cache
 C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.exe
 C:\Users\Enis\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.pdb
+C:\Users\Dogruyer_2\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFrameWorkSamples.exe.config
+C:\Users\Dogruyer_2\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.exe
+C:\Users\Dogruyer_2\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.pdb
+C:\Users\Dogruyer_2\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFrameWorkSamples.exe
+C:\Users\Dogruyer_2\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFrameWorkSamples.pdb
+C:\Users\Dogruyer_2\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFramework.dll
+C:\Users\Dogruyer_2\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dogruyer_2\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFramework.xml
+C:\Users\Dogruyer_2\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dogruyer_2\Documents\GitHub\MVC-Training\EntityFrameWorkSamples\EntityFrameWorkSamples\obj\Debug\EntityFrameWorkSamples.csprojResolveAssemblyReference.cache
