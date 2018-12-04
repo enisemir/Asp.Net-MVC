@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace EntityFrameWorkSamples
 {
-    public class Kategori
+    public class Tedarikci
     {
         public int Id { get; set; }
-        public string KategoriAdi { get; set; }
+        public string FirmaAdi { get; set; }
+        public string Adres { get; set; }
+        public string Telefon { get; set; }
 
         public List<Urun> Urunler { get; set; }
     }
+
 }

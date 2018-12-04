@@ -12,5 +12,10 @@ namespace EntityFrameWorkSamples
         public string UrunAdi { get; set; }
         public double Fiyat { get; set; }
         public int StokAdeti { get; set; }
+        public int KategoriId { get; set; }
+
+        public Kategori Kategori { get; set; }
+
+        public List<Tedarikci> Tedarikciler { get; set; }
     }
 }
