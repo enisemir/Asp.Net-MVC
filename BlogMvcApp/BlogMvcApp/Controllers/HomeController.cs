@@ -13,6 +13,7 @@ namespace BlogMvcApp.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            var bloglar = context.Bloglar.Where(i=> i.Onay==true && i.Anasayfa== true)
             return View(context.Bloglar.ToList());
         }
     }
