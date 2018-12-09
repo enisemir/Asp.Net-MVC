@@ -12,6 +12,7 @@ namespace BlogMvcApp.Models
         {
             Database.SetInitializer(new BlogInitializer());
         }
+
         public DbSet<Blog> Bloglar { get; set; }
         public DbSet<Category> Kategoriler { get; set; }
     }

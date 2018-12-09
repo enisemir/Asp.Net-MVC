@@ -4,79 +4,76 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Blog</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.KategoriAdi)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category.KategoriAdi)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Baslik)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Baslik)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Aciklama)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Aciklama)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Resim)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Resim)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Icerik)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Icerik)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EklenmeTarihi)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EklenmeTarihi)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Onay)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Onay)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Anasayfa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Anasayfa)
-        </dd>
-
-    </dl>
-</div>
+<h1>@Model.Baslik</h1>
+<hr />
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    <span class="glyphicon glyphicon-time"></span>
+    @Model.EklenmeTarihi
 </p>
+<hr />
+<img class="img-responsive" src="http://placehold.it/900x300" alt="">
+<hr />
+<blockquote>
+    <p>@Model.Aciklama</p>
+</blockquote>
+<p>
+    @Model.Icerik
+</p>
+
+<div class="comment">
+    <hr />
+    <div class="well">
+        <h4>Yorum Yap :</h4>
+        <form role="form">
+            <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+    <hr />
+
+    <div class="media">
+        <a class="pull-left" href="#">
+            <img class="media-object" src="http://placehold.it/64x64" alt="">
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading">
+                Start Bootstrap
+                <small>August 25, 2014 at 9:30 PM</small>
+            </h4>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+    </div>
+    <div class="media">
+        <a class="pull-left" href="#">
+            <img class="media-object" src="http://placehold.it/64x64" alt="">
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading">
+                Start Bootstrap
+                <small>August 25, 2014 at 9:30 PM</small>
+            </h4>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+    </div>
+
+</div>
+
+
+@section SagKolon
+{
+    <div class="well">
+        <h4>Blog Search</h4>
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div>
+        <!-- /.input-group -->
+    </div>
+   @{Html.RenderAction("KategoriListesi", "Category"); }
+}

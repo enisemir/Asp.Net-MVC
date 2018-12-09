@@ -1,11 +1,14 @@
-﻿@model IEnumerable<BlogMvcApp.Models.Blog>
+﻿@model IEnumerable<BlogMvcApp.Models.BlogModel>
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Blog Listesi</h2>
+<hr />
+@Html.Partial("BlogListesi", Model)
 
-@foreach (var i in Model)
+@section SagKolon
 {
-    <p>@i.Baslik</p>
+    @Html.Partial("Search")
+    @{Html.RenderAction("KategoriListesi", "Category"); }
 }

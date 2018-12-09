@@ -14,19 +14,25 @@ namespace BlogMvcApp.Controllers
     {
         private BlogContext db = new BlogContext();
 
+
+        public PartialViewResult KategoriListesi()
+        {
+            return PartialView(db.Kategoriler.ToList());
+        }
+
         // GET: Category
         public ActionResult Index()
         {
-
             var kategoriler = db.Kategoriler
-                .Select(i =>
-                new CategoryModel()
-                {
-                   Id = i.Id,
-                   KategoriAdi =i.KategoriAdi,
-                   BlogSayisi =i.Bloglar.Count()
-                }
-                );
+                                .Select(i =>
+                                    new CategoryModel()
+                                    {
+                                        Id = i.Id,
+                                        KategoriAdi = i.KategoriAdi,
+                                        BlogSayisi = i.Bloglar.Count()
+                                    }
+                                );
+
             return View(kategoriler.ToList());
         }
 
@@ -53,10 +59,10 @@ namespace BlogMvcApp.Controllers
 
         // POST: Category/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,KategoriAdi")] Category category)
+        public ActionResult Create([Bind(Include = "KategoriAdi")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +91,7 @@ namespace BlogMvcApp.Controllers
 
         // POST: Category/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,KategoriAdi")] Category category)
@@ -94,6 +100,8 @@ namespace BlogMvcApp.Controllers
             {
                 db.Entry(category).State = EntityState.Modified;
                 db.SaveChanges();
+
+                TempData["Kategori"] = category;
                 return RedirectToAction("Index");
             }
             return View(category);
