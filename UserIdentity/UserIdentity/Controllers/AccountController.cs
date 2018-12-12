@@ -20,6 +20,20 @@ namespace UserIdentity.Controllers
         {
             var userStore = new UserStore<ApplicationUser>(new IdentitDataContext());
             userManager = new UserManager<ApplicationUser>(userStore);
+
+            userManager.PasswordValidator = new CustomPasswordValidator()
+            {
+                RequireDigit = true,
+                RequiredLength = 7,
+                RequireLowercase = true,
+                RequireUppercase = true
+              
+            };
+            userManager.UserValidator = new UserValidator<ApplicationUser>(userManager)
+            {
+                RequireUniqueEmail = true,
+                AllowOnlyAlphanumericUserNames=false
+            };
         }
 
         // GET: Account
